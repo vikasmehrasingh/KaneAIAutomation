@@ -27,6 +27,7 @@ jobs:
         
     - name: Run Python script
       run: |
+        pip install --upgrade pip
         pip install virtualenv
         python -m venv venv
         source venv/bin/activate
