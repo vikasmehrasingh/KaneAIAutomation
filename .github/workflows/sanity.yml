@@ -32,4 +32,4 @@ jobs:
         
     - name: Run Python script
       run: |
-        python test/test.py
+        python base/test/test.py
