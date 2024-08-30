@@ -11,7 +11,7 @@ on:
         options:
           - stage
           - prod
-      ENV:
+      ACCESS_KEY:
         description: 'Access Key Basic Auth'
         type: input
         required: true
@@ -46,4 +46,4 @@ jobs:
         pip install requests
         pip install requests python-dotenv
         python -m venv venv
-        ENV=${{ github.event.inputs.ENV }} python base/test/test.py
+        ENV=${{ github.event.inputs.ENV }} BEARER_TOKEN=${{ github.event.inputs.ACCESS_KEY }} python base/test/test.py
