@@ -1,7 +1,15 @@
 name: Run Python Script
 
 on: workflow_dispatch
-  
+  inputs:
+      ENV:
+        description: 'Environment to run tests against'
+        type: choice
+        required: true
+        default: 'stage'
+        options:
+          - stage
+          - prod
 
 jobs:
   run-script:
@@ -28,4 +36,4 @@ jobs:
         source venv/bin/activate
         pip install requests
         pip install python-dotenv
-        python base/test/test.py
+        ENV=${{ github.event.inputs.ENV }} python base/test/test.py

@@ -10,8 +10,8 @@ stage_tests_dict = {
     "82d4db2a-cc15-4f5a-b88a-43511b08b15b": "3b57540eba6d57fdb8100cb1f137f144"
 }
 
-# env = os.getenv('ENV')
-env = 'stage'
+env = os.getenv('ENV')
+# env = 'stage'
 
 if env == 'stage':
     # bearer_token = os.getenv('STAGE_BEARER_TOKEN')
