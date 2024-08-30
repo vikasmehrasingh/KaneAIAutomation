@@ -42,7 +42,9 @@ jobs:
         source venv/bin/activate
         pip install requests
         pip install requests python-dotenv
+        deactivate
 
     - name: Run Python script
       run: |
+        source venv/bin/activate
         ENV=${{ github.event.inputs.ENV }} BEARER_TOKEN=${{ github.event.inputs.ACCESS_KEY }} python base/test/test.py
