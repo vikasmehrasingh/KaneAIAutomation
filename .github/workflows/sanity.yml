@@ -11,6 +11,15 @@ on:
         options:
           - stage
           - prod
+      ENV:
+        description: 'Access Key Basic Auth'
+        type: input
+        required: true
+        default: 'Basic'
+        options:
+          - stage
+          - prod
+
 
 jobs:
   run-script:
@@ -28,13 +37,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install virtualenv
-        pip install requests
-        pip install requests python-dotenv
-        python -m venv venv
+        
 
     - name: Run Python script
       run: |
         source venv/bin/activate
-        pwd
+        pip install virtualenv
+        pip install requests
+        pip install requests python-dotenv
+        python -m venv venv
         ENV=${{ github.event.inputs.ENV }} python base/test/test.py
