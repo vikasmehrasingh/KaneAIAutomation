@@ -3,14 +3,14 @@ name: Run Python Script
 on: 
   workflow_dispatch:
     inputs:
-      ENV:
-        description: 'Environment to run tests against'
-        type: choice
-        required: true
-        default: 'stage'
-        options:
-          - stage
-          - prod
+    ENV:
+      description: 'Environment to run tests against'
+      type: choice
+      required: true
+      default: 'stage'
+      options:
+        - stage
+        - prod
 
 jobs:
   run-script:
