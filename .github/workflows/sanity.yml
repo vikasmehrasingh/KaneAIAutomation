@@ -1,6 +1,7 @@
 name: Run Python Script
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
   inputs:
       ENV:
         description: 'Environment to run tests against'
