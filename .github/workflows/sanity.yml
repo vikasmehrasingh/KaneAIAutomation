@@ -23,7 +23,7 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
 
     steps:
     - name: Checkout repository
