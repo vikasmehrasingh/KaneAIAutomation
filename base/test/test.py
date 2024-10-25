@@ -10,15 +10,17 @@ stage_tests_dict = {
     "82d4db2a-cc15-4f5a-b88a-43511b08b15b": "3b57540eba6d57fdb8100cb1f137f144"
 }
 
-# env = os.getenv('ENV')
-env = 'stage'
+env = os.getenv('ENV')
+bearer_token = os.getenv('BEARER_TOKEN')
 
-if env == 'stage':
-    # bearer_token = os.getenv('STAGE_BEARER_TOKEN')
-    bearer_token = 'cHJhdGVla3A6UjI1dUhxR21jeTdQY3FGNGJxc2F0VjA1YVB6SExKV2ZOQkhJQUl4Z285TE5kZ096R0I='
-else:
-    # bearer_token = os.getenv('BEARER_TOKEN')
-    bearer_token = 'cHJhdGVla3A6ZmVmWlRMdzVoWG1BTXltVzNmSm5wd2NtMHVLM25OUHk1bTViSEw1dUZoTm4wYTNIQTg='
+# env = 'stage'
+
+# if env == 'stage':
+# bearer_token = os.getenv('STAGE_BEARER_TOKEN')
+# bearer_token = 'cHJhdGVla3A6UjI1dUhxR21jeTdQY3FGNGJxc2F0VjA1YVB6SExKV2ZOQkhJQUl4Z285TE5kZ096R0I='
+# else:
+# bearer_token = os.getenv('BEARER_TOKEN')
+# bearer_token = 'cHJhdGVla3A6ZmVmWlRMdzVoWG1BTXltVzNmSm5wd2NtMHVLM25OUHk1bTViSEw1dUZoTm4wYTNIQTg='
 
 if env == 'stage':
     # base_url = os.getenv('STAGE_BASE_URL')
